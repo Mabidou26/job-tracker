@@ -5,4 +5,6 @@ import { CandidatureList } from './pages/candidature-list/candidature-list';
 export const routes: Routes = [
     { path:'', component: CandidatureForm },
     { path: 'add', component: CandidatureList },
+
+    
 ];

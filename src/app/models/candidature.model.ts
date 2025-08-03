@@ -1,5 +1,6 @@
 export interface Candidature {
-    id: number
+    
+    id: string
     lastname: string
     firstname: string
     email: string

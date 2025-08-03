@@ -1,0 +1,12 @@
+<h2>Mes candidatures</h2>
+
+<ul ngIf="candidatures.length > 0; else empty">
+  <li ngFor="let c of candidatures">
+    <a>{{ c.nom }}</a> — {{ c.poste }} le {{ c.date }}
+    <button (click)="deleteCandidature(c.id)">Supprimer</button>
+  </li>
+</ul>
+
+<ng-template #empty>
+  <p>no applications at this time.</p>
+</ng-template>

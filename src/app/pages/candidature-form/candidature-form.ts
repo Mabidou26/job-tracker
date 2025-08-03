@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CandidatureForm } '; 
 
 @Component({
   selector: 'app-candidature-form',
@@ -8,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class CandidatureForm {
 
+  onSubmit() {
+    if (this.candidatureForm.valid) {
+      console.log(this.candidatureForm.value);
+
+      }
+
 }
+
+}
+
