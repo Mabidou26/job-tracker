@@ -1,0 +1,12 @@
+<h2>La liste des candidatures</h2>
+
+
+<ul>
+  <li @For (let c of candidatures)>
+    {{ c.name }} - {{ c.email }}
+  </li>
+</ul>
+
+<ng-template #empty>
+  <p>Aucune candidature pour le moment.</p>
+</ng-template>

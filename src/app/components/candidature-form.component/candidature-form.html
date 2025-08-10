@@ -1,0 +1,21 @@
+<form [formGroup]="candidatureForm" (ngSubmit)="onSubmit()">
+
+  <input type="text" placeholder="Nom" formControlName="nom">
+  @if (candidatureForm.get('name')?.invalid && candidatureForm.get('nom')?.touched) {
+    <div class="error">Le nom est obligatoire</div>
+  }
+
+  <input type="text" placeholder="Poste" formControlName="poste">
+  @if (candidatureForm.get('poste')?.invalid && candidatureForm.get('poste')?.touched) {
+    <div class="error">Le poste est obligatoire</div>
+  }
+
+  <input type="date" formControlName="date">
+  @if (candidatureForm.get('date')?.invalid && candidatureForm.get('date')?.touched) {
+    <div class="error">La date est obligatoire</div>
+  }
+
+  <button type="submit" [disabled]="candidatureForm.invalid">
+    Envoyer
+  </button>
+</form>

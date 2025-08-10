@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-candidature-form',
-  templateUrl: './candidature-form.component.html',
+  standalone: true,
+  templateUrl: './candidature-form.html',
+  imports: [ReactiveFormsModule]
 })
 export class CandidatureFormComponent {
-  candidatureForm;
+  candidatureForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.candidatureForm = this.fb.group({

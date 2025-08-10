@@ -1,21 +1,10 @@
 import { Component } from '@angular/core';
-import { CandidatureForm } '; 
+import { CandidatureFormComponent} from '../../components/candidature-form.component/candidature-form';
 
 @Component({
   selector: 'app-candidature-form',
-  imports: [],
   templateUrl: './candidature-form.html',
-  styleUrl: './candidature-form.css'
+  imports: [CandidatureFormComponent],
 })
-export class CandidatureForm {
-
-  onSubmit() {
-    if (this.candidatureForm.valid) {
-      console.log(this.candidatureForm.value);
-
-      }
-
-}
-
-}
+export class CandidatureFormPage {}
 
